@@ -1,0 +1,26 @@
+{
+  "version": "high-precision-v3",
+  "title": "高胜率精选",
+  "holding_days": 5,
+  "round_trip_cost": 0.003,
+  "take_profit_pct": 0.03,
+  "stop_loss_pct": 0.06,
+  "position_fraction": 0.2,
+  "rule": {
+    "breadth_floor": 0.5,
+    "momentum_floor": 0.02,
+    "drawdown_floor": -0.15,
+    "max_picks": 1
+  },
+  "deployment_gates": {
+    "minimum_win_rate": 0.65,
+    "minimum_trades": 200,
+    "minimum_activity_rate": 0.15,
+    "minimum_mean_net_return": 0.0,
+    "maximum_position_drawdown": 0.12,
+    "minimum_good_years": 4,
+    "minimum_year_win_rate": 0.6,
+    "minimum_worst_year_win_rate": 0.45,
+    "minimum_positive_neighbors": 2
+  }
+}

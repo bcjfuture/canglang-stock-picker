@@ -1,0 +1,44 @@
+{
+  "title": "郑希景气精选",
+  "top_n": 20,
+  "news_factor": {
+    "enabled": true,
+    "lookback_days": 7,
+    "positive_cap": 8,
+    "negative_cap": -15,
+    "hard_risk_penalty": -20,
+    "min_shortlist": 60,
+    "max_workers": 6
+  },
+  "industry_cap": 4,
+  "minimum_deal_amount": 100000000,
+  "minimum_average_amount_20": 100000000,
+  "minimum_turnover": 0.3,
+  "minimum_history_days": 40,
+  "strict_total_score": 70,
+  "strict_industry_score": 28,
+  "strict_repair_score": 15,
+  "reject_name_keywords": [
+    "ST",
+    "*ST",
+    "退"
+  ],
+  "top_sheet_name": "郑希景气Top",
+  "industry_sheet_name": "行业景气Top",
+  "repair_sheet_name": "ROE修复Top",
+  "risk_sheet_name": "候补与风险",
+  "all_sheet_name": "全部郑希候选",
+  "top_sheet_title": "郑希景气精选20只候选",
+  "top_sheet_subtitle": "行业景气优先，寻找低ROE修复代理证据；严格不足时透明补位，不主动空仓。",
+  "rules_note": [
+    "这是依据郑希公开投资方法构造的软件量化映射，不代表郑希本人观点、持仓或荐股。",
+    "行业景气40分、ROE修复代理25分、行业内质量15分、流动性10分、估值与时机10分。",
+    "当前数据没有完整历史ROE、研发、客户供应链和全球市占率，不对这些缺失维度虚构评分。",
+    "只使用信号日当时已经公告的财务数据；结果为研究辅助，不构成投资建议。"
+  ],
+  "selection_version": "20261008-evidence-v2",
+  "holding": {
+    "buffer_rank": 40,
+    "max_hold_runs": 20
+  }
+}

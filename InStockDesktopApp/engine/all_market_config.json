@@ -1,0 +1,83 @@
+{
+  "title": "全市场市赚率3.0选股",
+  "top_n": 20,
+  "min_score": 20,
+  "selection_mode": "market_earnings_v3",
+  "market_earnings_v3": {
+    "historical_roe_years": 3,
+    "history_fetch_workers": 8,
+    "max_market_earnings_ratio": 1,
+    "financial_industries": [
+      "银行",
+      "非银行金融"
+    ],
+    "industry_cap": 4,
+    "low_risk_max_penalty": 1
+  },
+  "news_factor": {
+    "enabled": true,
+    "lookback_days": 7,
+    "positive_cap": 8,
+    "negative_cap": -15,
+    "hard_risk_penalty": -20,
+    "min_shortlist": 60,
+    "max_workers": 6
+  },
+  "historical_profile": "all_trend_quality",
+  "historical_factor_score_scale": 100,
+  "require_historical_factors": false,
+  "historical_factor_weights": {
+    "mom_20": 0.6,
+    "mom_60": 1.1,
+    "ma_gap_5_20": 0.5,
+    "trend_20_60": 1.0,
+    "volatility_20": -0.6,
+    "distance_high_60": 0.4,
+    "liquidity_20": 0.3,
+    "overheat": -1.0
+  },
+  "require_focus_match": false,
+  "all_market_base_score": 18,
+  "all_market_label": "全市场候选",
+  "focus_keywords": [],
+  "focus_industries": [],
+  "reject_name_keywords": [
+    "ST",
+    "*ST",
+    "退"
+  ],
+  "candidate_label": "全市场候选数",
+  "top_sheet_name": "全市场Top",
+  "fund_sheet_name": "资金流入Top",
+  "fundamental_sheet_name": "基本面优选",
+  "risk_sheet_name": "卖出风险",
+  "all_sheet_name": "全部候选样本",
+  "top_sheet_title": "全市场市赚率3.0 Top候选",
+  "top_sheet_subtitle": "PB<1且市赚率<1；低风险档优先，同档按市赚率排序，单一行业最多4只",
+  "fund_sheet_title": "全市场资金流入Top",
+  "fund_sheet_subtitle": "按今日主力净流入排序，辅助观察资金方向",
+  "fundamental_sheet_title": "市赚率3.0基本面合格池",
+  "fundamental_sheet_subtitle": "使用最近三个已披露完整年度的最低ROE；增长、现金流和负债异常仅作风险提示",
+  "risk_sheet_title": "带卖出或风险提示的候选",
+  "risk_sheet_subtitle": "命中指标卖出信号或其他风险提示的候选，优先谨慎",
+  "all_sheet_title": "全部候选样本",
+  "all_sheet_subtitle": "全市场打分后的前300个样本",
+  "preview_file": "a_share_picker_preview.png",
+  "rules_note": [
+    "全市场A股参与，硬性要求0<PB<1、PE为正且具有最近三个完整年度的ROE记录。",
+    "ROE取截至选股日已披露的最近三个完整年度最低值，半年报和季报不参与历史最低值计算。",
+    "市赚率3.0=N×PB×100÷历史最低ROE%²；N按最新股息率×PE估算的股利支付率在1至2之间修正。",
+    "硬性要求市赚率3.0<1；等于或大于1不得进入，也不得用于补足20只。",
+    "净利下降、非金融股高负债或经营现金流为负改为风险提示，不再作为隐藏的一票否决条件。",
+    "出现指标卖出信号、资金流出、ST/退市风险会扣分或剔除。",
+    "结果只是候选池，不构成投资建议。",
+    "基本面风险分≤1为低风险档、其余为待核查档；低风险档优先，同档内按市赚率3.0升序；单一行业最多4只。",
+    "这是估值策略，适合按月观察；前次入选股票仍在合格池前40名时继续保留（最多60个交易日）。"
+  ],
+  "selection_version": "20261008-evidence-v2",
+  "holding": {
+    "buffer_rank": 40,
+    "max_hold_runs": 60,
+    "rank_sheet": "基本面优选"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "holding_days": [5, 7, 10, 15, 20],
+  "atr_multipliers": [1.0, 1.25, 1.5, 1.75, 2.0],
+  "reward_risk": [1.5, 2.0, 2.5],
+  "breadth_floors": [0.00, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55],
+  "momentum_floors": [-0.20, -0.05, -0.03, -0.01, 0.00, 0.01, 0.03],
+  "drawdown_floors": [-0.60, -0.35, -0.30, -0.25, -0.20, -0.15],
+  "strong_pick_counts": [12, 15],
+  "normal_pick_counts": [5, 8, 10]
+}

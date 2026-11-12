@@ -1,0 +1,41 @@
+{
+  "version": "high-precision-v5",
+  "training_end": "2024-12-20",
+  "validation_start": "2025-01-01",
+  "probability_fit_end": "2023-12-29",
+  "probability_calibration_start": "2024-01-02",
+  "probability_l2": 1.0,
+  "probability_bins": 8,
+  "ridge": 10.0,
+  "round_trip_cost": 0.003,
+  "take_profit_pct": 0.05,
+  "stop_loss_pct": 0.05,
+  "position_fraction": 0.04,
+  "rule": {
+    "good": {
+      "breadth_floor": 0.50,
+      "momentum_floor": 0.02,
+      "drawdown_floor": -0.15,
+      "target_count": 5,
+      "score": "v5_score"
+    },
+    "normal": {
+      "breadth_floor": 0.45,
+      "momentum_floor": 0.005,
+      "drawdown_floor": -0.22,
+      "target_count": 3,
+      "score": "v5_score"
+    },
+    "poor": {
+      "target_count": 1,
+      "score": "v5_score"
+    }
+  },
+  "deployment_gates": {
+    "minimum_trades": 1000,
+    "minimum_mean_excess_return": 0.0,
+    "minimum_benchmark_beat_rate": 0.52,
+    "minimum_mean_net_return": 0.0,
+    "maximum_signal_basket_drawdown": 0.15
+  }
+}

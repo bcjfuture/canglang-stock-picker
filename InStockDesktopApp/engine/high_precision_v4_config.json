@@ -1,0 +1,38 @@
+{
+  "version": "high-precision-v4",
+  "holding_days": 5,
+  "round_trip_cost": 0.003,
+  "take_profit_pct": 0.03,
+  "stop_loss_pct": 0.09,
+  "position_fraction": 0.04,
+  "rule": {
+    "good": {
+      "breadth_floor": 0.50,
+      "momentum_floor": 0.02,
+      "drawdown_floor": -0.15,
+      "target_count": 5,
+      "score": "pullback_score"
+    },
+    "normal": {
+      "breadth_floor": 0.45,
+      "momentum_floor": 0.005,
+      "drawdown_floor": -0.22,
+      "target_count": 3,
+      "score": "low_vol_trend_score"
+    },
+    "poor": {
+      "target_count": 1,
+      "score": "rebound_score"
+    }
+  },
+  "deployment_gates": {
+    "minimum_win_rate": 0.68,
+    "minimum_trades": 2000,
+    "minimum_mean_net_return": 0.0,
+    "maximum_signal_basket_drawdown": 0.15,
+    "minimum_good_years": 4,
+    "minimum_year_win_rate": 0.60,
+    "minimum_worst_year_win_rate": 0.60,
+    "minimum_positive_neighbors": 2
+  }
+}

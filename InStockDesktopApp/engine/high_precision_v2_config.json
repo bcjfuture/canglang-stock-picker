@@ -1,0 +1,69 @@
+{
+  "version": "high-precision-v2",
+  "holding_days": 5,
+  "round_trip_cost": 0.003,
+  "calibration_trading_days": 126,
+  "calibration_bins": 8,
+  "beta_alpha": 1.0,
+  "beta_beta": 1.0,
+  "quarter_dates": [
+    "20211231",
+    "20220331",
+    "20220630",
+    "20220930",
+    "20221231",
+    "20230331",
+    "20230630",
+    "20230930",
+    "20231231",
+    "20240331",
+    "20240630",
+    "20240930",
+    "20241231",
+    "20250331",
+    "20250630",
+    "20250930",
+    "20251231",
+    "20260331"
+  ],
+  "l2_values": [0.1, 1.0, 10.0],
+  "ensemble_weights": [
+    {"name": "trend", "trend": 1.0, "reversal": 0.0, "quality": 0.0},
+    {"name": "reversal", "trend": 0.0, "reversal": 1.0, "quality": 0.0},
+    {"name": "quality", "trend": 0.0, "reversal": 0.0, "quality": 1.0},
+    {
+      "name": "trend_50_reversal_25_quality_25",
+      "trend": 0.5,
+      "reversal": 0.25,
+      "quality": 0.25
+    },
+    {
+      "name": "equal",
+      "trend": 0.3333333333333333,
+      "reversal": 0.3333333333333333,
+      "quality": 0.3333333333333333
+    }
+  ],
+  "strong_thresholds": [0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85],
+  "normal_threshold_deltas": [0.03, 0.05],
+  "max_picks_values": [1, 2, 3],
+  "market_policies": [
+    {"breadth_floor": 0.35, "momentum_floor": -0.03, "drawdown_floor": -0.3},
+    {"breadth_floor": 0.4, "momentum_floor": -0.02, "drawdown_floor": -0.25},
+    {"breadth_floor": 0.45, "momentum_floor": 0.0, "drawdown_floor": -0.2},
+    {"breadth_floor": 0.5, "momentum_floor": 0.02, "drawdown_floor": -0.15}
+  ],
+  "deployment_gates": {
+    "minimum_win_rate": 0.85,
+    "minimum_activity_rate": 0.2,
+    "minimum_trades": 50,
+    "minimum_active_dates_per_fold": 5,
+    "minimum_fold_win_rate": 0.65,
+    "minimum_majority_fold_win_rate": 0.8,
+    "minimum_majority_fold_count": 3,
+    "minimum_mean_net_return": 0.0,
+    "minimum_mean_excess_return": 0.0,
+    "maximum_drawdown": 0.12,
+    "minimum_positive_neighbors": 2
+  }
+}
